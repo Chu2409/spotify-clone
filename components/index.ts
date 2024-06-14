@@ -7,6 +7,8 @@ import Button from './Button'
 import ListItem from './ListItem'
 import Modal from './Modal'
 import AuthModal from './AuthModal'
+import UploadModal from './UploadModal'
+import Input from './Input'
 
 export {
   Sidebar,
@@ -18,4 +20,6 @@ export {
   ListItem,
   Modal,
   AuthModal,
+  UploadModal,
+  Input,
 }
