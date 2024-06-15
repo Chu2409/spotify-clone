@@ -122,6 +122,7 @@ const UploadModal = () => {
             type='file'
             accept='.mp3'
             disabled={isLoading}
+            className='cursor-pointer'
             {...register('song', { required: true })}
           />
         </div>
@@ -134,6 +135,7 @@ const UploadModal = () => {
             type='file'
             accept='image/*'
             disabled={isLoading}
+            className='cursor-pointer'
             {...register('image', { required: true })}
           />
         </div>
