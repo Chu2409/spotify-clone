@@ -24,6 +24,7 @@ const MediaItem: React.FC<MediaItemProps> = ({ data, onClick }) => {
       <div className='relative rounded-md min-h-[48px] min-w-[48px] overflow-hidden'>
         <Image
           src={imageUrl || '/images/liked.webpn'}
+          sizes='100%'
           alt='Media Item'
           className='object-cover'
           fill

@@ -1,6 +1,6 @@
 'use client'
 
-import { useAuthModal, useUploadModal, useUser } from '@/hooks'
+import { useAuthModal, useOnPlay, useUploadModal, useUser } from '@/hooks'
 import { Song } from '@/types'
 import { AiOutlinePlus } from 'react-icons/ai'
 import { TbPlaylist } from 'react-icons/tb'
@@ -15,6 +15,7 @@ const Library: React.FC<LibraryProps> = ({ songs }) => {
   const uploadModal = useUploadModal()
 
   const { user } = useUser()
+  const onPlay = useOnPlay(songs)
 
   const onClick = () => {
     if (!user) return authModal.onOpen()
@@ -40,7 +41,11 @@ const Library: React.FC<LibraryProps> = ({ songs }) => {
 
       <div className='flex flex-col gap-y-2 mt-4 px-3'>
         {songs.map((song) => (
-          <MediaItem key={song.id} data={song} onClick={() => {}} />
+          <MediaItem
+            key={song.id}
+            data={song}
+            onClick={(id: string) => onPlay(id)}
+          />
         ))}
       </div>
     </div>

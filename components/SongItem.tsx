@@ -22,6 +22,7 @@ const SongItem: React.FC<SongItemProps> = ({ data, onClick }) => {
         <Image
           src={imagePath || '/images/liked.webp'}
           alt='Song Image'
+          sizes='100%'
           fill
           className='object-cover'
         />

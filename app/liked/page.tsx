@@ -15,6 +15,7 @@ const Liked = async () => {
           <div className='flex flex-col md:flex-row items-center gap-x-5'>
             <div className='relative h-32 w-32 lg:h-44 lg:w-44'>
               <Image
+                sizes='100%'
                 src='/images/liked.webp'
                 fill
                 alt='Playlist'
