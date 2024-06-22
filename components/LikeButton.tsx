@@ -24,14 +24,12 @@ const LikeButton: React.FC<LikeButtonProps> = ({ songId }) => {
     if (!user?.id) return
 
     const fetchData = async () => {
-      const { data, error } = await supabaseClient
+      const data = await supabaseClient
         .from('liked_songs')
         .select('*')
         .eq('user_id', user.id)
         .eq('song_id', songId)
-        .single()
-
-      if (!error && data) {
+      if (!data.error && data.data?.[0]) {
         setIsLiked(true)
       }
     }
